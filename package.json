@@ -1,0 +1,21 @@
+{
+  "name": "testes_regressivos_fc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:record": "npx cypress run --record --key 19591123-59da-4553-820d-900f07d833c1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.5.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
