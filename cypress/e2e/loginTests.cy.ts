@@ -55,4 +55,25 @@ describe('Login Page', () => {
         expect(interception.response.statusCode).to.eq(400); 
       })
   })
+
+  it('Deve invalidar o teste', () => {
+    cy.url()
+    .should('include', '/login')
+
+    cy.get('div input[aria-label=E-mail]')
+      .should('be.visible')
+      .type(Cypress.env('email'))
+
+    cy.get('div input[aria-label=Password]')
+     .should('be.visible')
+     .type(Cypress.env('password'))
+
+    cy.get('.submit-btn > .q-btn__wrapper > .q-btn__content')
+      .should('be.visible')
+      .click()    
+
+      cy.wait('@SignIn').then((interception) => {
+        expect(interception.response.statusCode).to.eq(400); 
+      })
+  })
 })
